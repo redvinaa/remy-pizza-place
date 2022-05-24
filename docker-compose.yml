@@ -1,0 +1,15 @@
+---
+version: '2.4'
+
+services:
+  pizza_stage1:
+    image: pizza_stage1
+    build: pizza_stage1
+    container_name: pizza_stage1
+    network_mode: "host"
+    environment:
+      - GAZEBO_MASTER_IP=127.0.0.1
+      - GAZEBO_MASTER_URI=127.0.0.1:11345
+    stdin_open: true  # docker run -i
+    tty: true         # docker run -t
+    stop_signal: SIGINT

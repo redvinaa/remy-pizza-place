@@ -1,0 +1,5 @@
+<launch>
+  <node name="stage1" pkg="pizza_stage1" type="stage1" output="screen">
+    <param name="use_sim_time" type="string" value="true"/>
+  </node>
+</launch>
