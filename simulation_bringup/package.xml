@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>simulation_bringup</name>
+  <version>0.0.0</version>
+  <description>The simulation_bringup package</description>
+  <maintainer email="redvinaa@gmail.com">Vince Reda</maintainer>
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>franka_gripper</build_depend>
+  <build_depend>gazebo_ros</build_depend>
+  <build_export_depend>franka_gripper</build_export_depend>
+  <build_export_depend>gazebo_ros</build_export_depend>
+  <exec_depend>franka_gripper</exec_depend>
+  <exec_depend>gazebo_ros</exec_depend>
+
+  <export>
+    <gazebo_ros
+        gazebo_plugin_path="${prefix}/lib"
+        gazebo_model_path="${prefix}/.." />
+  </export>
+</package>
