@@ -2,10 +2,10 @@
 version: '2.4'
 
 services:
-  simulation_bringup:
-    image: simulation_bringup
-    build: simulation_bringup
-    container_name: simulation_bringup
+  remy_pizza_place:
+    image: remy_pizza_place
+    build: .
+    container_name: remy_pizza_place
     network_mode: host
     environment:
       - DISPLAY=${DISPLAY}
@@ -18,14 +18,3 @@ services:
       - /tmp/.gazebo/:/root/.gazebo/
       - /tmp/.X11-unix:/tmp/.X11-unix
       - ./simulation_bringup/config:/opt/ros/overlay_ws/src/simulation_bringup/config
-  pizza_stage1:
-    image: pizza_stage1
-    build: pizza_stage1
-    container_name: pizza_stage1
-    network_mode: "host"
-    environment:
-      - GAZEBO_MASTER_IP=127.0.0.1
-      - GAZEBO_MASTER_URI=127.0.0.1:11345
-    stdin_open: true  # docker run -i
-    tty: true         # docker run -t
-    stop_signal: SIGINT
